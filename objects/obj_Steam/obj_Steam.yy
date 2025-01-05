@@ -37,5 +37,5 @@
     "path":"sprites/Steam_icon_logo_svg/Steam_icon_logo_svg.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

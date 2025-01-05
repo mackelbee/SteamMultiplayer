@@ -52,6 +52,8 @@
     {"id":{"name":"fnt_gm_30","path":"fonts/fnt_gm_30/fnt_gm_30.yy",},},
     {"id":{"name":"obj_Ball","path":"objects/obj_Ball/obj_Ball.yy",},},
     {"id":{"name":"obj_Bullet","path":"objects/obj_Bullet/obj_Bullet.yy",},},
+    {"id":{"name":"obj_Button_HOSTLOBBY","path":"objects/obj_Button_HOSTLOBBY/obj_Button_HOSTLOBBY.yy",},},
+    {"id":{"name":"obj_Button_JOINLOBBY","path":"objects/obj_Button_JOINLOBBY/obj_Button_JOINLOBBY.yy",},},
     {"id":{"name":"obj_Button","path":"objects/obj_Button/obj_Button.yy",},},
     {"id":{"name":"obj_Client","path":"objects/obj_Client/obj_Client.yy",},},
     {"id":{"name":"obj_Entity","path":"objects/obj_Entity/obj_Entity.yy",},},

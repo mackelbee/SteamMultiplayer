@@ -28,6 +28,8 @@
     {"name":"fnt_gm_20","order":1,"path":"fonts/fnt_gm_20/fnt_gm_20.yy",},
     {"name":"fnt_gm_30","order":2,"path":"fonts/fnt_gm_30/fnt_gm_30.yy",},
     {"name":"obj_Bullet","order":1,"path":"objects/obj_Bullet/obj_Bullet.yy",},
+    {"name":"obj_Button_HOSTLOBBY","order":4,"path":"objects/obj_Button_HOSTLOBBY/obj_Button_HOSTLOBBY.yy",},
+    {"name":"obj_Button_JOINLOBBY","order":5,"path":"objects/obj_Button_JOINLOBBY/obj_Button_JOINLOBBY.yy",},
     {"name":"obj_Entity","order":2,"path":"objects/obj_Entity/obj_Entity.yy",},
     {"name":"obj_Game","order":13,"path":"objects/obj_Game/obj_Game.yy",},
     {"name":"obj_gm_text","order":1,"path":"objects/obj_gm_text/obj_gm_text.yy",},
