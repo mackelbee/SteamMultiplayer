@@ -1,6 +1,6 @@
 function get_controls(_local)
 {
-	if _local {
+	if _local  {
 	//Directions inputs
 	rightKey = keyboard_check(vk_right) ||keyboard_check(ord("D")) || gamepad_button_check( 0, gp_padr );
 	rightKey = clamp( rightKey, 0, 1 );
