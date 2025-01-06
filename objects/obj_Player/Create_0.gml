@@ -3,7 +3,7 @@
 localSteamID = steam_get_user_steam_id();
 isLocal = (localSteamID == steam_ID)
 
-lobby_member_ID = 0;
+image_index = lobby_member_ID;
 
 moveSpeed = 5
 fireCooldown = 50
