@@ -13,6 +13,7 @@ switch (async_load[?"event_type"])
 	}
 	else
 	{
+		show_debug_message("Lobby Count: " + string(steam_lobby_list_get_count()));
 		for (var _i = 0; _i	< steam_lobby_list_get_count(); _i++)
 		{
 			var _inst = instance_create_depth(x, bbox_top + 40 + 80 * _i, -20, obj_LobbyItem, 
