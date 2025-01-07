@@ -4,7 +4,7 @@
 //Are we restarting?
 is_game_restarting = false;
 
-
+steam_init();
 
 // Log if the game knows it's connected to steam
 if steam_initialised() show_debug_message("Steam Init");
