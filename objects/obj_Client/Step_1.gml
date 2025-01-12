@@ -19,6 +19,48 @@ while(steam_net_packet_receive())
 			sync_players(_playerlist);
 		break;
 		
+		case NETWORK_PACKETS.SPAWN_OTHER:
+			var _layer = layer_get_id("Instances");
+			var _x	= buffer_read(inbuff, buffer_u16);
+			var _y	= buffer_read(inbuff, buffer_u16);
+			var _steamID = buffer_read(inbuff, buffer_u64);
+			var _num = array_length(player_list);
+			var _inst = instance_create_layer(_x, _y, _layer, obj_Player, {
+				steam_name : steam_get_user_persona_name(_steamID),
+				steam_ID : _steamID,
+				lobby_member_ID : _num,
+			})
+			array_push(player_list,{
+				steam_ID: _steamID,
+				steam_name: steam_get_persona_name(_steamID),
+				character: _inst,
+				lobby_member_ID: _num,
+				
+			})
+		break;
+		
+		case NETWORK_PACKETS.SPAWN_SELF:
+			for (var _i = 0; _i < array_length(_playerlist); _i++)
+			{
+				if player_list[_i].steam_ID == steam_ID then lobby_member_ID = player_list[_i].lobby_member_ID;	
+			}
+			var _layer = layer_get_id("Instances");
+			var _x	= buffer_read(inbuff, buffer_u16);
+			var _y	= buffer_read(inbuff, buffer_u16);
+			var _inst = instance_create_layer(_x, _y, _layer, obj_Player, {
+				steam_name : steam_name,
+				steam_ID : steam_ID,
+				lobby_member_ID : lobby_member_ID,
+			})
+			
+			player_list[0].character = _inst;
+			character = _inst;
+			
+		break;
+		
+		default:
+			show_debug_message("unknown packet recieved");
+		break;
 	}
 	
 	
