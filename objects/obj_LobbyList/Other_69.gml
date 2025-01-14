@@ -14,16 +14,23 @@ switch (async_load[?"event_type"])
 	else
 	{
 		show_debug_message("Lobby Count: " + string(steam_lobby_list_get_count()));
-		for (var _i = 0; _i	< steam_lobby_list_get_count(); _i++)
+		for(var _a = 0 ; _a < steam_lobby_list_get_count() ; _a++)
 		{
-			var _inst = instance_create_depth(x, bbox_top + 40 + 80 * _i, -20, obj_LobbyItem, 
-				{
-					lobby_index		: _i,
-					lobby_id		: steam_lobby_get_lobby_id(_i),
-					lobby_creator	: steam_lobby_list_get_data(_i, "Creator"),
-				});
-				array_push(lobby_list, _inst);
+			var ins = instance_create_depth(x, 40 + 80*_a, 0, obj_LobbyItem);
+			ins.lobby_index = _a;
+			ins.lobby_id = steam_lobby_list_get_lobby_id(_a);
+			ins.lobby_creator = steam_lobby_list_get_data(_a, "Creator");
 		}
+		//for (var _i = 0; _i	< steam_lobby_list_get_count(); _i++)
+		//{
+		//	var _inst = instance_create_depth(x, bbox_top + 40 + 80 * _i, -20, obj_LobbyItem, 
+		//		{
+		//			lobby_index		: _i,
+		//			lobby_id		: steam_lobby_get_lobby_id(_i),
+		//			lobby_creator	: steam_lobby_list_get_data(_i, "Creator"),
+		//		});
+		//		array_push(lobby_list, _inst);
+		//}
 	}
 	
 	break;
