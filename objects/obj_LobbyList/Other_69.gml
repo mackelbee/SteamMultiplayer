@@ -13,6 +13,7 @@ switch (async_load[?"event_type"])
 	}
 	else
 	{
+		show_debug_message("lobby exists");
 		show_debug_message("Lobby Count: " + string(steam_lobby_list_get_count()));
 		for(var _a = 0 ; _a < steam_lobby_list_get_count() ; _a++)
 		{
