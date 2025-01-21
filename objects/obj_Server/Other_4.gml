@@ -13,3 +13,6 @@ for (var _player = 0; _player < array_length(player_list); _player++){
 	player_list[_player].start_pos = _pos;
 	if (player_list[_player].steam_ID == steam_ID) then character = _inst;
 }
+
+//start syncing player postions
+alarm[0] = 5;

@@ -8,6 +8,9 @@ steam_name = steam_get_persona_name();
 character = undefined;
 
 
+//template buffer
+inbuff = buffer_create(16, buffer_grow,1);
+
 player_list[0] = {
 	steam_ID		: steam_ID,
 	steam_name		: steam_name,

@@ -58,6 +58,14 @@ while(steam_net_packet_receive())
 			
 		break;
 		
+		case NETWORK_PACKETS.SERVER_PLAYER_INPUT:
+			recieve_player_input(inbuff);
+			break
+			
+		case NETWORK_PACKETS.PLAYER_POSITION:
+			update_player_position(inbuff)
+			break
+		
 		default:
 			show_debug_message("unknown packet recieved");
 		break;
