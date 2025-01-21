@@ -43,7 +43,7 @@ function recieve_player_input(_b, _steam_id=-1){
 	
 	return {
 		steam_ID: _steam_id,
-		xInput: _xInput,
+		xInput:	_xInput,
 		yInput: _yInput,
 		runKey: _runKey,
 		actionKey: _actionKey
@@ -57,7 +57,7 @@ function find_player_by_steam_id(_steam_id){
 	{
 		var _player = player_list[_i].character;
 		if _player == undefined continue;
-		if _player.steam_id == _steam_id return _player;
+		if _player.steam_ID == _steam_id return _player;
 	}
 	return noone;
 }
