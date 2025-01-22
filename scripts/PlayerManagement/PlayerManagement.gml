@@ -17,9 +17,9 @@ function send_player_input(_input, _lobby_host){
 	var _actionKey = _input.actionKey;
 	// Create the buffer
 	//show_debug_message("Client input created");
-	var _b = buffer_create(13, buffer_fixed, 1); // 1 + 8 + 1 + 1 + 1 + 1 = 5
+	var _b = buffer_create(5, buffer_fixed, 1); // 1 + 8 + 1 + 1 + 1 + 1 = 5
 	buffer_write(_b, buffer_u8, NETWORK_PACKETS.CLIENT_PLAYER_INPUT);// 1 Identify what we're sending
-	buffer_write(_b, buffer_u64, steam_ID);
+	//buffer_write(_b, buffer_u64, steam_ID);
 	buffer_write(_b, buffer_s8, _x_input); // 1 Send x input
 	buffer_write(_b, buffer_s8, _y_input);// 1 send y input
 	buffer_write(_b, buffer_u8, _runKey); // 1 send run key pressed
