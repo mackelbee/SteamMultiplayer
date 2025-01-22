@@ -40,7 +40,7 @@ while(steam_net_packet_receive())
 		break;
 		
 		case NETWORK_PACKETS.SPAWN_SELF:
-			for (var _i = 0; _i < array_length(_playerlist); _i++)
+			for (var _i = 0; _i < array_length(player_list); _i++)
 			{
 				if player_list[_i].steam_ID == steam_ID then lobby_member_ID = player_list[_i].lobby_member_ID;	
 			}
