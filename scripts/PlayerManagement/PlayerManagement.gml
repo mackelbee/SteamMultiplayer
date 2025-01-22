@@ -16,6 +16,7 @@ function send_player_input(_input, _lobby_host){
 	var _runKey  = _input.runKey;
 	var _actionKey = _input.actionKey;
 	// Create the buffer
+	//show_debug_message("Client input created");
 	var _b = buffer_create(13, buffer_fixed, 1); // 1 + 8 + 1 + 1 + 1 + 1 = 5
 	buffer_write(_b, buffer_u8, NETWORK_PACKETS.CLIENT_PLAYER_INPUT);// 1 Identify what we're sending
 	buffer_write(_b, buffer_u64, steam_ID);
@@ -25,6 +26,7 @@ function send_player_input(_input, _lobby_host){
 	buffer_write(_b, buffer_u8, _actionKey); // 1 send action key pressed
 	steam_net_packet_send(_lobby_host, _b); // Send the buffer to the lobby host
 	buffer_delete(_b); // Delete buffer
+	//show_debug_message("Client input sent to Server");
 }
 
 ///@description Player Input Packet Reading for SERVER/CLIENT
@@ -36,12 +38,13 @@ function recieve_player_input(_b, _steam_id=-1){
 	var _runKey = buffer_read(_b, buffer_u8);
 	var _actionKey = buffer_read(_b, buffer_u8);
 	var _player = find_player_by_steam_id(_steam_id);
+	show_debug_message("Player Input recieved");
 	if _player == noone return;
-	_player._xInput		= _xInput;
-	_player._yInput		= _yInput;
-	_player._runKey		= _runKey;
-	_player._actionKey	= _actionKey;
-	
+	_player.xInput		= _xInput;
+	_player.yInput		= _yInput;
+	_player.runKey		= _runKey;
+	_player.actionKey	= _actionKey;
+	show_debug_message("input interpreted");
 	return {
 		steam_ID: _steam_id,
 		xInput:	_xInput,
