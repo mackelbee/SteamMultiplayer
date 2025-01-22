@@ -44,12 +44,12 @@ function get_controls(_is_host,_is_local)
 		//Send Input to Server
 		var _input = 
 			{
-				rightKey: _rightKey, 
-				leftKey: _leftKey, 
-				downKey: _downKey, 
-				upKey: _upKey, 
-				runKey: _runKey, 
-				actionKey: _actionKey
+				rightKey:	_rightKey, 
+				leftKey:	_leftKey, 
+				downKey:	_downKey, 
+				upKey:		_upKey, 
+				runKey:		_runKey, 
+				actionKey:	_actionKey
 			}
 		send_player_input(_input,lobby_host);
 	}

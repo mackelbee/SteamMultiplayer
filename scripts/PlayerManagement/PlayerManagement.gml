@@ -13,7 +13,7 @@ function send_player_input(_input, _lobby_host){
 	// Simplify the inputs
 	var _x_input = (_input.rightKey - _input.leftKey);	
 	var _y_input = (_input.downKey - _input.upKey);
-	var _runKey  = _input._runKey;
+	var _runKey  = _input.runKey;
 	var _actionKey = _input.actionKey;
 	// Create the buffer
 	var _b = buffer_create(5, buffer_fixed, 1); // 1 + 1 + 1 + 1 + 1 = 5
